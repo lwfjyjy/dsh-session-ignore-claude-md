@@ -1,0 +1,31 @@
+{
+  "name": "@lwfjyjy/dsh-session-ignore-claude-md",
+  "version": "0.1.0",
+  "description": "按 AGENTS.md -> CLAUDE.md 的先后顺序加载项目规则文件：同目录存在靠前规则时跳过靠后的 CLAUDE.md，避免重复注入、节省上下文。不改内置 dsh-agent-instructions 代码。",
+  "type": "module",
+  "license": "MIT",
+  "author": "lwfjyjy",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "agent-instructions"
+  ],
+  "engines": {
+    "node": ">=24",
+    "dsh": ">=0.2.1-rc.5"
+  },
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

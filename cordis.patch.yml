@@ -1,0 +1,5 @@
+# 轻量插件：插入本插件。真正“只取 AGENTS.md”的逻辑在 index.js 里，
+# 启动时给共享的 fs 服务包一层，所有模式（标准/PTC/Cordis…）都会自动只读 AGENTS.md。
+- insert:
+    - id: session-ignore-claude-md
+      name: '@lwfjyjy/dsh-session-ignore-claude-md'
